@@ -21,7 +21,9 @@
 	        		</div>
 	        		<div class="comment-area">
 	          			<div class="comment-author clearfix">
-	            			<strong> <%= post_comment.user.name %> </strong>
+	            			<%= link_to user_path(post.user) do %>
+								<strong class="name-color"> <%= post.user.name %> </strong>
+							<% end %>
 	          			</div>
 						<div class="day">
 							<%= l @post.created_at, format: :long %>

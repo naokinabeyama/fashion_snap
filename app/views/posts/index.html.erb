@@ -28,7 +28,9 @@
 								</div>
 							<% end %>
 							<div class="post-index-name">
-								<strong> <%= post.user.name %> </strong>
+								<%= link_to user_path(post.user) do %>
+									<strong class="name-color"> <%= post.user.name %> </strong>
+								<% end %>
 							</div>
 							<div class="post-index-favorite clearfix">
 								<div id="favorites_buttons_<%= post.id %>">

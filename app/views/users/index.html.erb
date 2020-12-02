@@ -20,7 +20,9 @@
 								<% end %>
 							</td>
 							<td class="user-index-user-name">
-								<strong> <%= user.name %> </strong>
+								<%= link_to user_path(user) do %>
+									<strong class="name-color"> <%= user.name %> </strong>
+								<% end %>
 							</td>
 							<td class="user-index-user-gender">
 								<%= user.gender %>
