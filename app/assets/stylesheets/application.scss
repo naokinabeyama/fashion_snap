@@ -393,8 +393,6 @@ footer {
 	padding-right: 20px;
 }
 
-
-
 .post-show-user-profiel {
 	padding: 25px 0 0 30px;
 }
@@ -513,6 +511,10 @@ footer {
 
 .post-user-image {
 	float: left;
+}
+
+.post-user-image:hover {
+	opacity: 0.5;
 }
 
 .post-index-name {
@@ -710,4 +712,51 @@ footer {
 .guest-login {
 	padding: 10px 0;
 	color: black;
+}
+
+.log-in {
+	text-align: center;
+	font-size: 40px;
+}
+
+.login-text {
+	margin-top: 40px;
+	border: solid 1px #aaaaaa;
+	background-color: #f5f5f5;
+}
+
+.login-table {
+	margin: 30px 0;
+	text-align: center;
+}
+
+.login-item {
+	padding: 8px 0;
+}
+
+.login-name {
+	font-size: 23px;
+	padding: 8px 0;
+}
+
+.login-field {
+	font-size: 17px;
+}
+
+.login-btn {
+	font-size: 18px;
+	padding: 8px 0;
+}
+
+.alert {
+	text-align: center;
+}
+
+.shared {
+	color: gray;
+	padding-top: 5px;
+}
+
+.image:hover {
+	opacity: 0.5;
 }

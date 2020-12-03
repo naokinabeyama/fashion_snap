@@ -1,36 +1,62 @@
-<div class="text-center">
-<h1>Sign up</h1>
+<div class="edit">
+<h1 class="log-in">Sign up</h1>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
+  <div class="login-text">
+  	<div class="login-table">
+	  <div class="login-item">
+	  	<div class="login-name">
+		    <%= f.label :名前 %><br/>
+		</div>
+		<div class="login-field">
+		    <%= f.text_field :name, autofocus: true, autocomplete: "名前" %>
+		</div>
+	  </div>
 
-  <div class="field">
-    <%= f.label :名前 %><br />
-    <%= f.text_field :name, autofocus: true, autocomplete: "名前" %>
-  </div>
+	  <div class="login-item">
+	  	<div class="login-name">
+		    <%= f.label :メールアドレス %><br/>
+		</div>
+		<div class="login-field">
+		    <%= f.email_field :email, autofocus: true, autocomplete: "メールアドレス" %>
+		</div>
+	  </div>
 
-  <div class="field">
-    <%= f.label :メールアドレス %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "メールアドレス" %>
-  </div>
+	  <div class="login-item">
+	  	<div class="login-name">
+		    <%= f.label :パスワード %>
+		</div>
+		    <% if @minimum_password_length %>
+		    <em>(<%= @minimum_password_length %> 文字以上入力)</em>
+		    <% end %><br/>
+		<div class="login-field">
+		    <%= f.password_field :password, autocomplete: "パスワード" %>
+		</div>
+	  </div>
 
-  <div class="field">
-    <%= f.label :パスワード %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "パスワード" %>
-  </div>
+	  <div class="login-item">
+	  	<div class="login-name">
+		    <%= f.label :確認用パスワード %><br/>
+		</div>
+		<div class="login-field">
+		    <%= f.password_field :password_confirmation, autocomplete: "パスワード" %>
+		</div>
+	  </div>
 
-  <div class="field">
-    <%= f.label :確認用パスワード %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "パスワード" %>
-  </div>
+	  <div class="login-btn">
+	    <%= f.submit "新規登録" %>
+	  </div>
 
-  <div class="actions">
-    <%= f.submit "新規登録" %>
+	  <%= link_to users_guest_sign_in_path, method: :post do %>
+	    <div class="guest-login">
+	      <%= f.submit "ゲストログイン（閲覧用）" %>
+	    </div>
+	  <% end %>
+
+	  <%= render "devise/shared/links" %>
+
+	</div>
   </div>
 <% end %>
-
-<%= render "devise/shared/links" %>
 </div>
