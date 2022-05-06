@@ -29,7 +29,6 @@ https://drive.google.com/file/d/1S1gxQ3jCz7pdnyhhRQIioQj4pGMwo2sl/view?usp=shari
 https://docs.google.com/spreadsheets/d/1RgVgRzAPU7OG1HEnAGwBnSQNDnAWpyNE3tNdA_gWBw0/edit?usp=sharing
 
 ## 開発環境
-- OS：Linux(CentOS)
 - 言語：HTML,CSS,JavaScript,Ruby,SQL
 - フレームワーク：Ruby on Rails
 - JSライブラリ：jQuery
